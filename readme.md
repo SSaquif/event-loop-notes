@@ -14,7 +14,7 @@ There is a thread pool
 
 ### **Blocking VS Non Blocking**
 
-A while loop runs 1 Billion times. Blocking the 2nd console .log() untils it's done
+A while loop runs 1 Billion times. Blocking the 2nd synchronous log() untils it's done
 
 ```javascript
 const tick = Date.now();
@@ -119,4 +119,9 @@ const codeBlocker = () => {
 2. [Jake Archibald Talk](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
 3. [Node JS Event Loop VS Browser Event Loop](https://blog.insiderattack.net/javascript-event-loop-vs-node-js-event-loop-aea2b1b85f5c)
 4. [Node JS v11 Event Loop Update](https://blog.insiderattack.net/new-changes-to-timers-and-microtasks-from-node-v11-0-0-and-above-68d112743eb3)
-5. [Turning on Emojis :anguished:](https://www.thapatechnical.com/2020/05/how-to-type-emoji-in-vs-code-in-2020-vs.htmls)
+
+## TODO
+
+1. Improve this when you get time
+2. Add a Good Event Loop Diagram
+3. A bit more explanation of Micro VS Macro Task (Use a Table for Comparison instead)
