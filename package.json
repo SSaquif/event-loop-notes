@@ -1,0 +1,11 @@
+{
+  "name": "event-loop",
+  "version": "1.0.0",
+  "description": "Event Loop Notes (NodeJS/Browser)",
+  "main": "index.js",
+  "author": "Sadnan Saquif",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
