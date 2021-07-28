@@ -7,13 +7,13 @@
 Basically one main thread. Async Operation (Promises, setTimeOuts etc) run on separate pool
 There is a thread pool
 
-### Some Things to keep in Mind
-
-1. Tasks and Macro Task seems to be
-
 ### Main Thread
 
-Web Pages (and NodeJS) have a thing called the Main Thread. We call it the main thread because loads of stuff happens here and it is where JavaScript happens.
+Web Pages (and NodeJS) have a thing called the Main Thread (Also called the Application Thread) We call it the main thread because loads of stuff happens here and it is where JavaScript happens.
+
+Technically NodeJS (and all othre JS runtime) does have a thread pool provided in Node's case by the library libuv written in C/C++(see the diagram on the NodeJS Design Pattern book). We as NodeJS devs do not have direct access ti this thread pool.
+
+There is the notion of worker threads but we wont get into that here. This [video](https://www.youtube.com/watch?v=UCd6LorxpkY&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B&index=6) mentions it briefly. I am assumong it's similar to web-workers or service workers on the browser
 
 It's where rendering happens. It's where the DOM lives.And this means that the bulk of your stuff on the web has a deterministic order.
 
@@ -151,15 +151,13 @@ const codeBlocker = () => {
 };
 ```
 
-```
+```bash
 🏎️  Synchronous 1, Elapsed: 0 ms
 
 🏃 Synchronous 2 was blocked, Elapsed: 3 ms
 
 🐢 Blocked Everyone, Elapsed: 363 ms
 ```
-
-3. P
 
 ## Resources
 
