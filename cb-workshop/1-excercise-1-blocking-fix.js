@@ -64,4 +64,4 @@ makeAllCaps(stringArray)
     log(`🐢 Error Occured: ${error.message}`);
   });
 
-log("🏃 Synchronous 2 was blocked");
+log("🏃 Synchronous 2");
